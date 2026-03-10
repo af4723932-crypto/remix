@@ -52,6 +52,10 @@
 - We use `typedoc` to process the source code, and then generate markdown files from the typedoc output
 - Markdown API documentation files be generated via `pnpm run docs` in the docs/ directory
 
+## Skills
+
+Repository-specific skills live in the `skills/` directory. Look there first before looking for external skills.
+
 ## Changes and Releases
 
 - **Adding changes**: Create `packages/*/.changes/[major|minor|patch].short-description.md` files. See [CONTRIBUTING.md](./CONTRIBUTING.md#adding-a-change-file) for details.

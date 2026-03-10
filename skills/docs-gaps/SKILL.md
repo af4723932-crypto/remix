@@ -17,7 +17,7 @@ This workflow applies for a single package. If operating on multiple packages, r
 
 First, remove ALL exported **types** from `index.ts` and any other `package.json` `exports` files for the package. Do not remove runtime API exports. Commit these changes.
 
-Second, generate documentation `pnpm run docs` from the `docs/` directory and look for any comments of the format `[warning] {API}, defined in {FILE}, is referenced by {API} but not included in the documentation` that are referring to APIs within the package
+Second, generate documentation by running `pnpm run docs` from the `docs/` directory and look for any output of the format `[warning] {API}, defined in {FILE}, is referenced by {API} but not included in the documentation` that are referring to APIs within the package
 
 Third, adjust the source code to export those APIs so the warnings go away. You might need to export the API from it's source file to make it available for re-export through the top-level export file. Commit these changes.
 
