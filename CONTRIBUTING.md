@@ -36,7 +36,8 @@ All packages are published with TypeScript types along with both ESM and CJS mod
 
 ## Making Changes
 
-Packages live in the [`packages` directory](https://github.com/remix-run/remix/tree/v3/packages). At a minimum, each package includes:
+Packages live in the [`packages` directory](https://github.com
+/remix-run/remix/tree/v3/packages). At a minimum, each package includes:
 
 - `.changes/`: Directory containing change files for the next release
 - `CHANGELOG.md`: A log of what's changed
