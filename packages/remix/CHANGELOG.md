@@ -2,6 +2,49 @@
 
 This is the changelog for [`remix`](https://github.com/remix-run/remix/tree/main/packages/remix). It follows [semantic versioning](https://semver.org/).
 
+## v3.0.0-alpha.4
+
+### Pre-release Changes
+
+- Add `remix/cors-middleware` to re-export the CORS middleware APIs from `@remix-run/cors-middleware`.
+
+- Added `package.json` `exports`:
+
+  - `remix/cop-middleware` to re-export APIs from `@remix-run/cop-middleware`
+  - `remix/csrf-middleware` to re-export APIs from `@remix-run/csrf-middleware`
+  - `remix/data-table/migrations` to re-export APIs from `@remix-run/data-table/migrations`
+  - `remix/data-table/migrations/node` to re-export APIs from `@remix-run/data-table/migrations/node`
+  - `remix/data-table/operators` to re-export APIs from `@remix-run/data-table/operators`
+  - `remix/data-table/sql` to re-export APIs from `@remix-run/data-table/sql`
+  - `remix/data-table/sql-helpers` to re-export APIs from `@remix-run/data-table/sql-helpers`
+
+- Add browser-origin and CSRF protection middleware APIs to `remix`.
+
+  - `remix/cop-middleware` exposes `cop(options)` for browser-focused cross-origin protection
+    using `Sec-Fetch-Site` with `Origin` fallback, trusted origins, and configurable bypasses.
+  - `remix/csrf-middleware` exposes `csrf(options)` and `getCsrfToken(context)` for
+    session-backed CSRF tokens plus origin validation.
+  - Apps can use either middleware independently or layer `cop()`, `session()`, and `csrf()`
+    together when they want both browser-origin filtering and token-backed protection.
+
+- Bumped `@remix-run/*` dependencies:
+  - [`async-context-middleware@0.1.4`](https://github.com/remix-run/remix/releases/tag/async-context-middleware@0.1.4)
+  - [`component@0.6.0`](https://github.com/remix-run/remix/releases/tag/component@0.6.0)
+  - [`compression-middleware@0.1.4`](https://github.com/remix-run/remix/releases/tag/compression-middleware@0.1.4)
+  - [`cop-middleware@0.1.0`](https://github.com/remix-run/remix/releases/tag/cop-middleware@0.1.0)
+  - [`cors-middleware@0.1.0`](https://github.com/remix-run/remix/releases/tag/cors-middleware@0.1.0)
+  - [`csrf-middleware@0.1.0`](https://github.com/remix-run/remix/releases/tag/csrf-middleware@0.1.0)
+  - [`data-table@0.2.0`](https://github.com/remix-run/remix/releases/tag/data-table@0.2.0)
+  - [`data-table-mysql@0.2.0`](https://github.com/remix-run/remix/releases/tag/data-table-mysql@0.2.0)
+  - [`data-table-postgres@0.2.0`](https://github.com/remix-run/remix/releases/tag/data-table-postgres@0.2.0)
+  - [`data-table-sqlite@0.2.0`](https://github.com/remix-run/remix/releases/tag/data-table-sqlite@0.2.0)
+  - [`fetch-router@0.18.0`](https://github.com/remix-run/remix/releases/tag/fetch-router@0.18.0)
+  - [`form-data-middleware@0.2.0`](https://github.com/remix-run/remix/releases/tag/form-data-middleware@0.2.0)
+  - [`logger-middleware@0.1.4`](https://github.com/remix-run/remix/releases/tag/logger-middleware@0.1.4)
+  - [`method-override-middleware@0.1.5`](https://github.com/remix-run/remix/releases/tag/method-override-middleware@0.1.5)
+  - [`session-middleware@0.2.0`](https://github.com/remix-run/remix/releases/tag/session-middleware@0.2.0)
+  - [`static-middleware@0.4.5`](https://github.com/remix-run/remix/releases/tag/static-middleware@0.4.5)
+
 ## v3.0.0-alpha.3
 
 ### Pre-release Changes
