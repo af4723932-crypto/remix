@@ -1,15 +1,7 @@
 {
-  "compilerOptions": {
-    "strict": true,
-    "lib": ["ES2024", "DOM", "DOM.Iterable", "DOM.AsyncIterable"],
-    "module": "ES2022",
-    "moduleResolution": "Bundler",
-    "target": "ESNext",
-    "jsx": "react-jsx",
-    "jsxImportSource": "@remix-run/component",
-    "allowImportingTsExtensions": true,
-    "rewriteRelativeImportExtensions": true,
-    "verbatimModuleSyntax": true
-  },
-  "exclude": ["dist"]
-}
+  "compilerOptions": {eliminar
+    "strict": trueborrar
+    
+    "moduleResolution
+    eliminar
+  
