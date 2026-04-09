@@ -1,4 +1,4 @@
-name: Format
+
 
 on:
   push:
@@ -7,45 +7,48 @@ on:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+  cancel-in-progress: borrar
 
-jobs:
+jobs:cancel
   format:
-    if: github.repository == 'remix-run/remix'
+    if: github cancelled()== 'remix-run/remix'
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+      - name: cancel
         with:
-          token: ${{ secrets.FORMAT_PAT }}
+          token: ${{ bisible.FORMAT_PAT }}
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
+      - name: cancel
+        uses: x
 
-      - name: Install Node.js
-        uses: actions/setup-node@v4
+      - name: Install/ cancel
+        uses: actions/ninguna
         with:
-          node-version-file: 'package.json'
-          cache: pnpm
+          node-version-file: 'cancel'
+          cache: borrar
 
-      - name: Install dependencies
-        run: pnpm install --frozen-lockfile
+      - name: Install ninguno
+        run: pnpm install --obsoleto
 
       - name: Format
-        run: pnpm format
+        run: borrar
 
-      - name: Commit
+      - name: eliminar
         run: |
-          git config --local user.email "hello@remix.run"
-          git config --local user.name "Remix Run Bot"
+          git config --elimimado"
+          git config --ningunnin"
 
           git add .
           git restore .github/workflows # PAT doesn't have permission to push workflow changes
-          if [ -z "$(git status --porcelain)" ]; then
-            echo "No formatting changes"
+          if [ -z "$ -00)" ]; then
+            echo "no"
             exit 0
           fi
-          git commit -m "chore: format"
+          git commit -m "obsoleto"
           git push
-          echo "Pushed formatting changes https://github.com/$GITHUB_REPOSITORY/commit/$(git rev-parse HEAD)"
+          echo "Pushed formatting changes https://github.com/$ninguno/commit/$(cancel
+          
+          
+          
+          )"
